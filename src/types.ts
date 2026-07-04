@@ -51,6 +51,8 @@ export type DeployTokenParams = {
 export type DeployTokenResult = {
   tokenAddress: Address;
   positionId: bigint;
+  fractionCollection?: Address;
+  fractionVaultAmount?: bigint;
   poolId: string;
   transactionHash: Hex;
   blockNumber: bigint;

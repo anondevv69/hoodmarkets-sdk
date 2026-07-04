@@ -94,6 +94,8 @@ export const HOODMARKETS_V3_ABI = [
       { name: 'amountTokensBought', type: 'uint256', indexed: false, internalType: 'uint256' },
       { name: 'vaultDuration', type: 'uint256', indexed: false, internalType: 'uint256' },
       { name: 'vaultPercentage', type: 'uint8', indexed: false, internalType: 'uint8' },
+      { name: 'fractionCollection', type: 'address', indexed: false, internalType: 'address' },
+      { name: 'fractionVaultAmount', type: 'uint256', indexed: false, internalType: 'uint256' },
       { name: 'msgSender', type: 'address', indexed: false, internalType: 'address' },
     ],
     anonymous: false,

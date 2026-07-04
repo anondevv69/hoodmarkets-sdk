@@ -16,17 +16,19 @@ export type RobinhoodAddresses = {
   factory: Address;
   vault: Address;
   lpLocker: Address;
+  fractionDeployer: Address;
   platformFeeRecipient: Address;
   owner: Address;
 };
 
-/** Latest mainnet addresses — sync with hoodmarkets `contracts/deployed-robinhood-mainnet.json`. */
+/** Latest mainnet addresses — sync with hoodmarkets `contracts/deployed-hoodmarkets-v3-mainnet.json`. */
 export const ROBINHOOD_MAINNET: RobinhoodAddresses = {
   chainId: ROBINHOOD_CHAIN_ID,
   weth: ROBINHOOD_WETH,
-  factory: '0xcFE4D69Ac8e5F79a95d99e991162902f68029f09',
-  vault: '0xe250a07229Bcf29a2cC02d6070beE82252F71C36',
-  lpLocker: '0x209eFAA86568f0Ea0E25d1F0E62f92e81c51a72a',
+  factory: '0xbd794cd9E10728Bb1CB5056A92830C3e945cE7b4',
+  vault: '0xf445351e478bB73d0A5812B0812c5eb9e374f00D',
+  lpLocker: '0x9875B9Ead485dc1C86a03625531bf677A9276089',
+  fractionDeployer: '0x39D0e6FB3aaC391a1CC2C3FcAd182c29FEe0c75f',
   platformFeeRecipient: '0xbfD1be7a12A9FeF04D281C2D8D0D9EE15b576d98',
   owner: '0xFA45A3b8d1662E3432D1B5bE3F37e4923D1b796C',
 };

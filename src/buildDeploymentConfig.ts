@@ -50,6 +50,7 @@ export function buildHoodMarketsV3DeploymentConfig(
       originatingChainId: BigInt(ROBINHOOD_CHAIN_ID),
     },
     vaultConfig: {
+      /** Always zero — v0.4+ embeds a mandatory 10% / 1000-share fraction vault in the factory. */
       vaultPercentage: 0,
       vaultDuration: 0n,
     },

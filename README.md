@@ -105,7 +105,7 @@ Bundled in `HoodMarkets.ADDRESSES` / `ROBINHOOD_MAINNET`:
 
 | Contract | Address |
 |----------|---------|
-| HoodMarketsV3 factory | `0xcFE4D69Ac8e5F79a95d99e991162902f68029f09` |
+| HoodMarketsV3 factory | `0xbd794cd9E10728Bb1CB5056A92830C3e945cE7b4` |
 | HoodMarketsV3 vault | `0xe250a07229Bcf29a2cC02d6070beE82252F71C36` |
 | HoodMarketsV3 LP locker | `0x209eFAA86568f0Ea0E25d1F0E62f92e81c51a72a` |
 | Platform fee wallet (5%) | `0xbfD1be7a12A9FeF04D281C2D8D0D9EE15b576d98` |

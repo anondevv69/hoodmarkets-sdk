@@ -88,14 +88,14 @@ export class HoodMarkets {
       account,
     };
 
-    let gasLimit = 15_000_000n;
+    let gasLimit = 18_000_000n;
     try {
       const estimated = await this.publicClient.estimateContractGas(writeParams);
       gasLimit = estimated + estimated / 4n;
-      if (gasLimit < 12_000_000n) gasLimit = 12_000_000n;
-      if (gasLimit > 20_000_000n) gasLimit = 20_000_000n;
+      if (gasLimit < 14_000_000n) gasLimit = 14_000_000n;
+      if (gasLimit > 24_000_000n) gasLimit = 24_000_000n;
     } catch {
-      gasLimit = 15_000_000n;
+      gasLimit = 18_000_000n;
     }
 
     const hash = await this.wallet.writeContract({
@@ -114,6 +114,8 @@ export class HoodMarkets {
     return {
       tokenAddress: created.tokenAddress,
       positionId: created.positionId,
+      fractionCollection: created.fractionCollection,
+      fractionVaultAmount: created.fractionVaultAmount,
       poolId: `v3:${created.positionId.toString()}`,
       transactionHash: hash,
       blockNumber: receipt.blockNumber,
@@ -169,3 +171,4 @@ export type {
   DeployTokenResult,
   HoodMarketsV3DeploymentConfig,
 } from './types.js';
+export type { HoodMarketsV3TokenCreated } from './parseTokenCreated.js';

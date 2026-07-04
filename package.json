@@ -1,0 +1,67 @@
+{
+  "name": "hoodmarkets-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for deploying HoodMarkets V3 tokens on Robinhood Chain",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./chains": {
+      "types": "./dist/chains.d.ts",
+      "import": "./dist/chains.mjs",
+      "require": "./dist/chains.js"
+    }
+  },
+  "bin": {
+    "hoodmarkets-sdk": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "example:deploy": "tsx examples/deploy-token-simple.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anondevv69/hoodmarkets-sdk.git"
+  },
+  "homepage": "https://github.com/anondevv69/hoodmarkets-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/anondevv69/hoodmarkets-sdk/issues"
+  },
+  "keywords": [
+    "hoodmarkets",
+    "hood.markets",
+    "robinhood",
+    "uniswap",
+    "v3",
+    "token",
+    "launchpad"
+  ],
+  "author": "hood.markets",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^14.0.3"
+  },
+  "peerDependencies": {
+    "viem": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.3.3",
+    "viem": "^2.38.3"
+  }
+}

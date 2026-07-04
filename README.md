@@ -4,19 +4,30 @@ The official TypeScript SDK for deploying **HoodMarkets V3** tokens on **Robinho
 
 Use it to launch tokens from your own website, script, or agent — same on-chain contracts as [hood.markets](https://hood.markets), without using the hood.markets UI.
 
-Modeled after [clanker-sdk](https://github.com/clanker-devco/clanker-sdk).
-
-**Contracts repo:** [github.com/anondevv69/hoodmarkets](https://github.com/anondevv69/hoodmarkets)
+**Contracts repo:** [github.com/anondevv69/hoodmarkets](https://github.com/anondevv69/hoodmarkets) · **Dev docs:** [hood.markets/Dev](https://hood.markets/Dev) · **Agent reference:** [hood.markets/sdk.md](https://hood.markets/sdk.md)
 
 ---
 
 ## Installation
 
+**Not on npm yet** — install from GitHub:
+
 ```bash
-npm install hoodmarkets-sdk viem
+npm install github:anondevv69/hoodmarkets-sdk viem
 # or
-pnpm add hoodmarkets-sdk viem
+pnpm add github:anondevv69/hoodmarkets-sdk viem
 ```
+
+Or clone and run from source:
+
+```bash
+git clone https://github.com/anondevv69/hoodmarkets-sdk
+cd hoodmarkets-sdk
+npm install
+npm run build
+```
+
+`npm install hoodmarkets-sdk` will work once the package is published.
 
 ---
 
@@ -60,23 +71,23 @@ console.log(result.hoodmarketsUrl);
 
 ## CLI
 
-```bash
-npm install -g hoodmarkets-sdk
+From a cloned repo (after `npm install`):
 
+```bash
 export PRIVATE_KEY=0x...
 
-hoodmarkets-sdk deploy \
+npx hoodmarkets-sdk deploy \
   --name "My Token" \
   --symbol "MTK" \
   --image "ipfs://…"
 
-hoodmarkets-sdk claim --token 0x...
+npx hoodmarkets-sdk claim --token 0x...
 ```
 
-Or without a global install:
+One-shot from GitHub (no clone):
 
 ```bash
-npx hoodmarkets-sdk deploy --name "My Token" --symbol "MTK" --image "https://…"
+npx github:anondevv69/hoodmarkets-sdk deploy --name "My Token" --symbol "MTK" --image "https://…"
 ```
 
 | Command | Description |
@@ -138,7 +149,6 @@ await hm.claimRewards('0xYourToken');
 | Repo | Purpose |
 |------|---------|
 | [hoodmarkets](https://github.com/anondevv69/hoodmarkets) | Contracts, API, hood.markets web UI |
-| [clanker-sdk](https://github.com/clanker-devco/clanker-sdk) | Reference SDK design |
 
 ---
 

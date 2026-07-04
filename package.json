@@ -31,6 +31,7 @@
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "example:deploy": "tsx examples/deploy-token-simple.ts"
   },
   "repository": {

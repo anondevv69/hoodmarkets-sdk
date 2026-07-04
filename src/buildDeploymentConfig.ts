@@ -32,6 +32,7 @@ export function buildHoodMarketsV3DeploymentConfig(
   input: BuildDeploymentConfigInput,
 ): HoodMarketsV3DeploymentConfig {
   const tokenAdmin = getAddress(input.tokenAdmin);
+  /** Fee wallet — also receives all 1,000 fraction shares at launch (creatorAdmin). */
   const feeRecipient = getAddress(input.feeRecipient ?? tokenAdmin);
   const salt = input.salt ?? keccak256(toHex(randomBytes(32)));
 
